@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:workout_planner/pages/home_page_no_state.dart';
+import 'package:workout_planner/pages/calculator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const Calculator(),
     );
   }
 }
