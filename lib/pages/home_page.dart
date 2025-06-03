@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:workout_planner/constants/colors.dart';
 import 'package:workout_planner/data/user_data.dart';
+import 'package:workout_planner/widgets/progress_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,6 +48,13 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.w700,
                     color: kMainBlackColor,
                   ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const ProgressCard(
+                  progressValue: 0.5,
+                  total: 100,
                 ),
               ],
             ),

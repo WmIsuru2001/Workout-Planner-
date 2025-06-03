@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:workout_planner/pages/add_new_page.dart';
 import 'package:workout_planner/pages/favourites_page.dart';
 import 'package:workout_planner/pages/home_page.dart';
@@ -30,6 +31,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Workout Planner",
+      theme: ThemeData(
+          primaryColor: Colors.blue,
+          textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)),
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.blue,
