@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:workout_planner/constants/colors.dart';
+import 'package:workout_planner/data/equipment_data.dart';
+import 'package:workout_planner/data/exercise_data.dart';
 import 'package:workout_planner/data/user_data.dart';
+import 'package:workout_planner/pages/exercise_detailes.dart';
 import 'package:workout_planner/widgets/exercise_card.dart';
 import 'package:workout_planner/widgets/progress_card.dart';
 
@@ -19,6 +22,10 @@ class _HomePageState extends State<HomePage> {
 
   //usre data
   final userData = user;
+
+  //exercise and equipment
+  final exerciseList = ExerciesData().exerciseList;
+  final equipmentList = EquipmentData().equipmentList;
 
   @override
   Widget build(BuildContext context) {
@@ -70,15 +77,31 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ExerciseCard(
-                      title: "Warmup",
-                      imageUrl: "assets/images/exercises/treadmill_2382679.png",
-                      description: "see more",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExerciseDetailes(
+                              exerciseTitle: "Warmup",
+                              exerciseDescription:
+                                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                              exerciseList: exerciseList,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const ExerciseCard(
+                        title: "Warmup",
+                        imageUrl:
+                            "assets/images/exercises/treadmill_2382679.png",
+                        description: "see more",
+                      ),
                     ),
-                    ExerciseCard(
+                    const ExerciseCard(
                       title: "Equipment ",
                       imageUrl:
                           "assets/images/equipments/bench-press_7922198.png",
