@@ -50,7 +50,7 @@ class ExerciseCard extends StatelessWidget {
             Text(
               description,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
                 color: kMainColor,
               ),
