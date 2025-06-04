@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const kSubtitleColor = Colors.grey;
+const kCardBgColor = Color.fromARGB(255, 228, 223, 223);
 const kMainWhiteColor = Colors.white;
 const kMainColor = Color(0xff0099FF);
 

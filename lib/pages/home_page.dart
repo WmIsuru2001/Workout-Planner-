@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:workout_planner/constants/colors.dart';
 import 'package:workout_planner/data/user_data.dart';
+import 'package:workout_planner/widgets/exercise_card.dart';
 import 'package:workout_planner/widgets/progress_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -62,10 +63,47 @@ class _HomePageState extends State<HomePage> {
                 const Text(
                   "Today's Activity",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
-                )
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ExerciseCard(
+                      title: "Warmup",
+                      imageUrl: "assets/images/exercises/treadmill_2382679.png",
+                      description: "see more",
+                    ),
+                    ExerciseCard(
+                      title: "Equipment ",
+                      imageUrl:
+                          "assets/images/equipments/bench-press_7922198.png",
+                      description: "see more",
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ExerciseCard(
+                      title: "Exercise",
+                      imageUrl: "assets/images/exercises/treadmill_2382679.png",
+                      description: "see more",
+                    ),
+                    ExerciseCard(
+                      title: "Stretching",
+                      imageUrl: "assets/images/exercises/treadmill_2382679.png",
+                      description: "see more",
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
