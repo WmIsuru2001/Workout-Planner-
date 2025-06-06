@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                               exerciseTitle: "Warmup",
                               exerciseDescription:
                                   "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
-                              exerciseList: exerciseList,
+                              dataList: exerciseList,
                             ),
                           ),
                         );
@@ -112,18 +112,49 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 15,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ExerciseCard(
-                      title: "Exercise",
-                      imageUrl: "assets/images/exercises/treadmill_2382679.png",
-                      description: "see more",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExerciseDetailes(
+                              exerciseTitle: "Exercises",
+                              exerciseDescription:
+                                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                              dataList: exerciseList,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const ExerciseCard(
+                        title: "Exercise",
+                        imageUrl:
+                            "assets/images/exercises/treadmill_2382679.png",
+                        description: "see more",
+                      ),
                     ),
-                    ExerciseCard(
-                      title: "Stretching",
-                      imageUrl: "assets/images/exercises/treadmill_2382679.png",
-                      description: "see more",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExerciseDetailes(
+                                exerciseTitle: "Stretching",
+                                exerciseDescription:
+                                    "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                                dataList: exerciseList),
+                          ),
+                        );
+                      },
+                      child: const ExerciseCard(
+                        title: "Stretching",
+                        imageUrl:
+                            "assets/images/exercises/treadmill_2382679.png",
+                        description: "see more",
+                      ),
                     ),
                   ],
                 ),

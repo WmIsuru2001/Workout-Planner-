@@ -8,12 +8,12 @@ import 'package:workout_planner/widgets/exercise_card.dart';
 class ExerciseDetailes extends StatefulWidget {
   final String exerciseTitle;
   final String exerciseDescription;
-  final List<Exercise> exerciseList;
+  final List<Exercise> dataList;
   const ExerciseDetailes(
       {super.key,
       required this.exerciseTitle,
       required this.exerciseDescription,
-      required this.exerciseList});
+      required this.dataList});
 
   @override
   State<ExerciseDetailes> createState() => _ExerciseDetailesState();
@@ -80,9 +80,9 @@ class _ExerciseDetailesState extends State<ExerciseDetailes> {
                     crossAxisSpacing: kDefaultPadding,
                     mainAxisSpacing: kDefaultPadding,
                   ),
-                  itemCount: widget.exerciseList.length,
+                  itemCount: widget.dataList.length,
                   itemBuilder: (context, index) {
-                    Exercise exercise = widget.exerciseList[index];
+                    Exercise exercise = widget.dataList[index];
                     return ExerciseCard(
                         title: exercise.exerciseName,
                         imageUrl: exercise.exerciseImageUrl,
