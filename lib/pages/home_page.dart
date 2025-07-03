@@ -4,6 +4,7 @@ import 'package:workout_planner/constants/colors.dart';
 import 'package:workout_planner/data/equipment_data.dart';
 import 'package:workout_planner/data/exercise_data.dart';
 import 'package:workout_planner/data/user_data.dart';
+import 'package:workout_planner/pages/equipment_details_page.dart';
 import 'package:workout_planner/pages/exercise_detailes.dart';
 import 'package:workout_planner/widgets/exercise_card.dart';
 import 'package:workout_planner/widgets/progress_card.dart';
@@ -101,11 +102,23 @@ class _HomePageState extends State<HomePage> {
                         description: "see more",
                       ),
                     ),
-                    const ExerciseCard(
-                      title: "Equipment ",
-                      imageUrl:
-                          "assets/images/equipments/bench-press_7922198.png",
-                      description: "see more",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => EquipmentDetailsPage(
+                                    equipmentTitle: "Equipment",
+                                    equipmentDescription:
+                                        "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                                    equipmentList: equipmentList)));
+                      },
+                      child: const ExerciseCard(
+                        title: "Equipment ",
+                        imageUrl:
+                            "assets/images/equipments/bench-press_7922198.png",
+                        description: "see more",
+                      ),
                     ),
                   ],
                 ),
