@@ -17,7 +17,7 @@ class EquipmentData {
       equipmentName: "Dumbbells",
       equipmentDescription:
           "A pair of dumbbells for strength training exercises.",
-      equipmentImageUrl: "assets/images/equipments/bench-press_7922198.png",
+      equipmentImageUrl: "assets/images/equipments/gym-station_674822.png",
       noOfMinuites: 5,
       noOfCalaries: 2,
       handOvered: false,
@@ -27,7 +27,7 @@ class EquipmentData {
       equipmentName: "Dumbbells",
       equipmentDescription:
           "A pair of dumbbells for strength training exercises.",
-      equipmentImageUrl: "assets/images/equipments/bench-press_7922198.png",
+      equipmentImageUrl: "assets/images/equipments/dumbbells_3023866.png",
       noOfMinuites: 5,
       noOfCalaries: 2,
       handOvered: false,
@@ -37,17 +37,17 @@ class EquipmentData {
       equipmentName: "Dumbbells",
       equipmentDescription:
           "A pair of dumbbells for strength training exercises.",
-      equipmentImageUrl: "assets/images/equipments/bench-press_7922198.png",
+      equipmentImageUrl: "assets/images/equipments/gym-station_674833.png",
       noOfMinuites: 5,
       noOfCalaries: 2,
       handOvered: false,
     ),
     Equipments(
       id: 4,
-      equipmentName: "Dumbbells",
+      equipmentName: "Treadmill",
       equipmentDescription:
           "A pair of dumbbells for strength training exercises.",
-      equipmentImageUrl: "assets/images/equipments/bench-press_7922198.png",
+      equipmentImageUrl: "assets/images/equipments/treadmill_7984779.png",
       noOfMinuites: 5,
       noOfCalaries: 2,
       handOvered: false,
